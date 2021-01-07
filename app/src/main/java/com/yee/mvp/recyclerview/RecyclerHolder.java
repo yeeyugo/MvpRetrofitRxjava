@@ -2,6 +2,7 @@ package com.yee.mvp.recyclerview;
 
 import android.util.SparseArray;
 import android.view.View;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -29,5 +30,10 @@ public class RecyclerHolder extends RecyclerView.ViewHolder {
         }
 
         return (T) view;
+    }
+
+    public void setText(int viewId, String value){
+        TextView textView = getView(viewId);
+        textView.setText(value);
     }
 }
