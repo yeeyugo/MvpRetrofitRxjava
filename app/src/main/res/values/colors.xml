@@ -10,4 +10,9 @@
 
     <color name="tab_text_select">#3185FD</color>
     <color name="tab_text_hide">#CCCCCC</color>
+
+    <color name="linkTextColor">#3185FD</color>
+    <color name="btc_button_text_gray">#80ADE7</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="btcBg">#EFF6FF</color>
 </resources>

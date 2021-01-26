@@ -1,14 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".tab.home.HomeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RadioGroup
+        android:id="@+id/rg_choose_coin"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="hello_home_fragment" />
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:checkedButton="@id/rb_usdt"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="30dp">
 
-</FrameLayout>
+        <RadioButton
+            android:id="@+id/rb_usdt"
+            style="@style/btc_home_style"
+            android:background="@drawable/btc_button_selector"
+            android:text="USDT" />
+
+        <RadioButton
+            android:id="@+id/rb_btc"
+            style="@style/btc_home_style"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/btc_button_selector"
+            android:text="BTC" />
+
+        <RadioButton
+            android:id="@+id/rb_eth"
+            style="@style/btc_home_style"
+            android:background="@drawable/btc_button_selector"
+            android:text="ETH" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/rg_pay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checkedButton="@id/rb_card"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_card"
+            style="@style/btc_home_style"
+            android:background="@drawable/pay_button_selector"
+            android:text="银行卡" />
+
+        <RadioButton
+            android:id="@+id/rb_chat"
+            style="@style/btc_home_style"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/pay_button_selector"
+            android:text="微信" />
+
+        <RadioButton
+            android:id="@+id/rb_ali"
+            style="@style/btc_home_style"
+            android:background="@drawable/pay_button_selector"
+            android:text="支付宝" />
+    </RadioGroup>
+
+</LinearLayout>
